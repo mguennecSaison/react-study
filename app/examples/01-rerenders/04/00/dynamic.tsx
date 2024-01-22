@@ -15,19 +15,21 @@ const Component = () => {
     <>
       <h2>Open console, click a button</h2>
       <p>Dynamic lists with index and id as key</p>
-      <p>Index as key doesn&apos;t work - children re-render. Id as key is fine</p>
+      <p>
+        Index as key doesn&apos;t work - children re-render. Id as key is fine
+      </p>
       <p>Children should not re-render</p>
 
       <button onClick={onClick}>click here {state}</button>
       <br />
       <br />
       {sortedValues.map((val, index) => (
-        <ChildMemo value={{value: `Child of index: ${val}`}} key={index} />
+        <ChildMemo simpleValue={`Child of index: ${val}`} key={index} />
       ))}
       <br />
       <br />
       {sortedValues.map((val) => (
-        <ChildMemo value={{value: `Child of id: ${val}`}} key={val} />
+        <ChildMemo simpleValue={`Child of id: ${val}`} key={val} />
       ))}
     </>
   );
