@@ -11,7 +11,7 @@ const Component = () => {
   return (
     <>
       <h2>Open console, click a button</h2>
-      <p>Re-render should not happen since the child is memoized</p>
+      <p>Re-render should happen since the child is not memoized</p>
       <button onClick={onClick}>click here {state}</button>
 
       <Child />
