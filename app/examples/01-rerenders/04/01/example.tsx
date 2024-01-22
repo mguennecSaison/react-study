@@ -12,11 +12,6 @@ const Component = () => {
   
     return (
       <>
-        <h2>Open console, click a button</h2>
-        <p>Static lists with index and id as key</p>
-        <p>both lists are fine</p>
-        <p>Children should not re-render</p>
-  
         <button onClick={onClick}>click here {state}</button>
         <br />
         <br />
